@@ -16,6 +16,7 @@
     text-align: center;
   }#dab{
     background-image: url("http://assets.rollingstone.com/assets/2015/list/2015s-hottest-dance-crazes-the-dab-hit-the-quan-and-beyond-20151130/217665/large_rect/1448326160/1401x788-The-Dance-Craze_lede.jpg");
+    text-align: center;
   }.carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 70%;
@@ -58,7 +59,30 @@
 <div id="dab" class="jumbotron">
   <h1>Owly Is Beast</h1>
   <p id="OIS">Owly consists of Alex, Alejandro, Cesar, and Enrique</p>
-  <p id="OIS"><a class="btn btn-primary btn-lg" href="#" role="button" onclick="prompt1()">News About Us?</a></p>
+  <!--modal button-->
+  <button type="button" class="btn btn-info btn-md" id="myBtn">News About Us?</button>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Mr.Owly</h4>
+        </div>
+
+        <div class="modal-body">
+          <p>Owly  is the V you see is our draw representation of an owl which represents diligence, wisdom, and adapts to it's environment. ~(^_)7.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 </div>
 <!--grid system-->
 
@@ -107,9 +131,17 @@
 <script type="text/javascript">
 	$('.dropdown-toggle').dropdown();
 
-  function prompt1(){
-    prompt("We have a new member and his name is Cesar and we are greatful to have him especially because he works hard plus, he has really good ideas too. We are getting ready to keep up the work and finish our product. Also...look at our dab ~(^_)7");
-  } 
+$(document).ready(
+  function(){
+    $("#myBtn").click(
+      function(){
+        $("#myModal").modal({
+          backdrop: true
+        });
+      });
+  });
+
+  
   function owly(){
     prompt("Owly  is the V you see is our draw representation of an owl which represents diligence, wisdom, and apdapts to it's environment.~(^_)7");
   }

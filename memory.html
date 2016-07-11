@@ -16,6 +16,7 @@
     text-align: center;
   }#dab{
     background-image: url("http://previews.123rf.com/images/darrenwhi/darrenwhi1303/darrenwhi130300054/18316388-Illustration-of-a-group-of-strange-looking-cartoon-characters-laughing-or-singing-Stock-Illustration.jpg");
+    text-align: center;
   }.carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 70%;
@@ -25,6 +26,8 @@
   }#yo{
     text-align: center;
     color: purple;
+  }.og{
+    color: white;
   }
 </style>
 
@@ -57,8 +60,29 @@
 <!-- jumbro tron-->
 <div id="dab" class="jumbotron">
   <h1>Memories xD</h1>
-  <p id="OIS">Owly Gang</p>
-  <p id="OIS"><a class="btn btn-primary btn-lg" href="#" role="button" onclick="twoOP()">Another button?</a></p>
+  <p class="og" id="OIS">Owly Gang</p>
+  <button type="button" class="btn btn-info btn-md" id="myBtn">Another Button?</button>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Jokes</h4>
+        </div>
+
+        <div class="modal-body">
+          <p>We have a new member and his name is Cesar and we are greatful to have him especially because he works hard plus, he has really good ideas too. We are getting ready to keep up the work and finish our product. Also...O_O...look at our dab ~(^_)7.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 </div>
 
 <h1 id="yo">Inside Jokes ^W^</h1>
@@ -71,6 +95,11 @@
 <script type="text/javascript">
   $('.dropdown-toggle').dropdown();
 
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal({backdrop: true});
+    });
+});
   function prompt1(){
     prompt("We have a new member and his name is Cesar and we are greatful to have him especially because he works hard plus, he has really good ideas too. We are getting ready to keep up the work and finish our product. Also...look at our dab ~(^_)7");
   } 
